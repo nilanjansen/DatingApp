@@ -31,6 +31,7 @@ import { FileUploadModule } from 'ng2-file-upload';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {TimeAgoPipe} from 'time-ago-pipe';
+import { ListsResolver } from './_resolvers/lists.resolver';
 
 
 export function tokenGetter() {
@@ -88,6 +89,7 @@ export class CustomHammerConfig extends HammerGestureConfig  {
       AlertifyService,
       MemberDetailResolver,
       MemberListResolver,
+      ListsResolver,
       { provide: HAMMER_GESTURE_CONFIG, useClass: CustomHammerConfig },
       MemberEditResolver,
       PreventUnsavedChanges
