@@ -32,6 +32,8 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {TimeAgoPipe} from 'time-ago-pipe';
 import { ListsResolver } from './_resolvers/lists.resolver';
+import { MessagesResolver } from './_resolvers/messages.resolver';
+import { MemberMessagesComponent } from './members/member-messages/member-messages.component';
 
 
 export function tokenGetter() {
@@ -51,6 +53,7 @@ export class CustomHammerConfig extends HammerGestureConfig  {
       HomeComponent,
       RegisterComponent,
       MemberListComponent,
+      MemberMessagesComponent,
       ListComponent,
       MessagesComponent,
       MemberCardComponent,
@@ -92,6 +95,7 @@ export class CustomHammerConfig extends HammerGestureConfig  {
       ListsResolver,
       { provide: HAMMER_GESTURE_CONFIG, useClass: CustomHammerConfig },
       MemberEditResolver,
+      MessagesResolver,
       PreventUnsavedChanges
    ],
    bootstrap: [
